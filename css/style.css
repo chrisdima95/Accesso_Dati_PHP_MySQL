@@ -1,0 +1,190 @@
+/* Reset e impostazioni base */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #fc466b 0%, #3f5efb 100%);
+    color: #353941;
+    min-height: 100vh;
+    letter-spacing: 0.03em;
+}
+
+/* Glassmorphism main container */
+main, .card {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(12px) saturate(130%);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border-radius: 18px;
+    margin: 3.2rem auto 0 auto;
+    max-width: 730px;
+    padding: 2.4rem 2.2rem;
+    border: 1.2px solid rgba(255,255,255,0.28);
+}
+
+header {
+    text-align: center;
+    padding: 2.1rem 0 0.3rem 0;
+    font-size: 2.9rem;
+    color: #fff;
+    text-shadow: 2px 2px 16px #4f37ac79;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.05);
+    padding: 0.4rem 0;
+    border-radius: 10px;
+    margin-bottom: 2.2rem;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.08rem;
+    text-decoration: none;
+    padding: 0.34em 1em;
+    border-radius: 9px;
+    transition: background .18s, color .16s;
+    background: rgba(255,255,255,0.09);
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #5456ec;
+    transition: 0.2s;
+}
+
+/* Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.24);
+    margin: 1rem 0;
+    box-shadow: 0 10px 32px -5px #12025322;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.95rem 1rem;
+    text-align: left;
+    font-size: 1.09rem;
+}
+
+th {
+    background: rgba(127, 119, 255, 0.13);
+    font-weight: 700;
+    color: #4740b5;
+}
+
+tr:nth-child(even) {
+    background: rgba(255,255,255,0.09);
+}
+
+tr:hover {
+    background: rgba(90, 69, 221, 0.08);
+    transition: 0.13s background;
+}
+
+/* Bottoni animati */
+input[type="submit"], button, .btn {
+    background: linear-gradient(90deg, #fc466b 0%, #3f5efb 55%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 0.62em 1.6em;
+    font-size: 1.08rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    box-shadow: 0 3px 16px -5px #2c058c8a;
+    transition: background 0.19s, transform 0.15s;
+    outline: none;
+    letter-spacing: 0.04em;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="submit"]:hover, button:hover, .btn:hover {
+    background: linear-gradient(90deg, #3f5efb 0%, #fc466b 85%);
+    color: #fff;
+    transform: translateY(-2.5px) scale(1.04);
+}
+
+/* Moduli */
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.34rem;
+    font-weight: 600;
+    color: #4740b5;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 99%;
+    padding: 0.7rem 0.8rem;
+    margin-bottom: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(220,220,220,0.73);
+    font-size: 1.07rem;
+    color: #363656;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #eee;
+    background: none;
+    font-size: 0.93rem;
+    margin-top: 5rem;
+    padding: 1.1rem 0;
+    text-shadow: 0 3px 12px #12025327;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(80,50,200,0.10);
+}
+::-webkit-scrollbar-thumb {
+    background: #684cafbb;
+    border-radius: 5px;
+}
+
+/* Messaggi successo e errore */
+.success-message, .error-message {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #282c34;
+}
+
+/* Specifiche per messaggio di successo */
+.success-message {
+    border: 2px solid #4BB543; /* verde */
+    color: #1a451f;
+}
+
+/* Specifiche per messaggio di errore */
+.error-message {
+    border: 2px solid #e74c3c; /* rosso */
+    color: #8b1c14;
+}
